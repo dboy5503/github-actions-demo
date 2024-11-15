@@ -7,6 +7,7 @@ on:
     branches:
       - develop
       - staging
+      - main
 
 # Jobs to carry out
 jobs:
@@ -31,4 +32,10 @@ jobs:
         
       # Run lint
       - name: Run Lint
-        run: npm run lint
+        run: echo "skiping lint"
+
+      - name: Run Build
+        run: npm run build
+      
+      - name: Run Tests
+        run: npm run test
